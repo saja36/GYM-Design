@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Class | ASA GYM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #111317;
+            --secondary-color: #97f120;
+            --text-light: #d1d5db;
+            --white: #ffffff;
+            --max-width: 1200px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        input, select {
+            padding: 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .btn {
+            padding: 1rem;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #71db0d;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Book A Class</h2>
+        <form id="book-class-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <select name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="number" name="age" placeholder="Your Age" required>
+            <select name="class-type" required>
+                <option value="" disabled selected>Select Class Type</option>
+                <option value="cardio">Cardio</option>
+                <option value="strength-training">Strength Training</option>
+                <option value="functional-exercises">Functional Exercises</option>
+            </select>
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('book-class-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form submitted successfully!');
+        });
+    </script>
+</body>
+</html>
