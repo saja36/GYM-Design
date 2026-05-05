@@ -14,5 +14,4 @@ A modern, responsive web interface for a Fitness & Gym application designed to p
 *   **Design:** UI/UX Principles, Wireframing.
 *   **Development:** HTML5, CSS3.
 
-## 📸 Preview
-*(Optional: Add a screenshot of your project here to make it look professional)*
+
